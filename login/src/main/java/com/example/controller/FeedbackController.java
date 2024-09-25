@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,16 +20,16 @@ public class FeedbackController {
     private JavaMailSender mailSender;  // Automatically inject the JavaMailSender
 
     @PostMapping("/submit-feedback")  // Handle POST requests to /api/submit-feedback
-    public String submitFeedback(@RequestBody Feedback feedback) {
-        sendEmail(feedback.getMessage());  // Send the feedback via email
-        saveFeedbackToFile(feedback.getMessage());  // Save the feedback to a file
+    public String submitFeedback(@RequestParam("feedback") String feedbackMessage) {
+        sendEmail(feedbackMessage);  // Send the feedback via email
+        saveFeedbackToFile(feedbackMessage);  // Save the feedback to a file
         return "Feedback submitted successfully!";  // Response message
     }
 
     // Method to send email with feedback message
     private void sendEmail(String message) {
         SimpleMailMessage mailMessage = new SimpleMailMessage();
-        mailMessage.setTo("recipient-email@gmail.com");  // Change this to your email
+        mailMessage.setTo("clinteth.dev@gmail.com");  // Change this to your email
         mailMessage.setSubject("New Feedback Submission");
         mailMessage.setText(message);
         mailSender.send(mailMessage);  // Send the email
@@ -44,3 +44,4 @@ public class FeedbackController {
         }
     }
 }
+
