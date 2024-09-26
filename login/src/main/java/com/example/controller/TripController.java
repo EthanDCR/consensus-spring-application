@@ -18,20 +18,20 @@ import com.example.service.TripService;
 @RequestMapping("/api/trips")
 public class TripController {
 
-    @Autowired
-    private TripService tripService;
+  @Autowired
+  private TripService tripService;
 
-    // Endpoint to create a new trip
-    @PostMapping
-    public ResponseEntity<Trip> createTrip(@RequestBody Trip trip) {
-        Trip createdTrip = tripService.createTrip(trip);
-        return new ResponseEntity<>(createdTrip, HttpStatus.CREATED);
-    }
+  // Endpoint to create a new trip
+  @PostMapping
+  public ResponseEntity<Trip> createTrip(@RequestBody Trip trip) {
+    Trip createdTrip = tripService.createTrip(trip);
+    return new ResponseEntity<>(createdTrip, HttpStatus.CREATED);
+  }
 
-    // Endpoint to get all trips
-    @GetMapping
-    public ResponseEntity<List<Trip>> getAllTrips() {
-        List<Trip> trips = tripService.getAllTrips();
-        return new ResponseEntity<>(trips, HttpStatus.OK);
-    }
+  // Endpoint to get all trips
+  @GetMapping
+  public ResponseEntity<List<Trip>> getAllTrips() {
+    List<Trip> trips = tripService.getAllTrips();
+    return new ResponseEntity<>(trips, HttpStatus.OK);
+  }
 }
