@@ -19,8 +19,7 @@ public class SecurityConfig {
             .anyRequest().authenticated() // Require authentication for all other requests
         )
         .formLogin(form -> form
-            .loginPage("/login") // Specify your login page
-            .permitAll())
+            .permitAll()) // Allow all users to access the login page (default login page)
         .logout(logout -> logout
             .permitAll());
 
