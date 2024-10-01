@@ -1,0 +1,96 @@
+/* Global font and background */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #4caf50, #388e3c); /* Smooth green gradient */
+    margin: 0;
+    padding: 0;
+    color: #f4f4f4; /* Light text for readability */
+}
+
+/* Container styling */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white box */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Headings and text */
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1.learn {
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    color: #ffc107; /* Highlight color for 'Consensus' */
+}
+
+h2 {
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Links and buttons (if needed) */
+a, button {
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover, button:hover {
+    color: #ffeb3b;
+}
+
+/* General layout adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1.learn {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+

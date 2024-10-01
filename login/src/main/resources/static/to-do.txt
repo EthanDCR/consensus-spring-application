@@ -1,0 +1,16 @@
+To DO List 
+
+	- First, complete the front-end unitl it is functional before making it look super nice with react and moving to backend with a data base and APIs.
+
+		Step one, Work on the dashboard layout and then start adding features as you see fit. 
+		(Dashboard has been created with a header, today, work on the function of creating a new trip.)
+
+	First step of creating the dashboard functionality -
+		within the header, create a button named " new trip " and write a js function that creates a new pop up for the user to enter the name of the group and the name of the trip, then once that is selected there will  			be a new trip listed on the users dashboard where they can go edit, start with this.
+
+
+		- Write an algorithm that handles user login and impliment a database. (maybe SQL)
+	
+
+
+

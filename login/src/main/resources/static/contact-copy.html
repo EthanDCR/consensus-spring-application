@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="./contact.css">
+</head>
+<body>
+    <div class="contact-container">
+        <img class="header-logo" src="consensus-logo3.png" alt="Consensus Logo">
+        <h1 class="contact-header">Contact</h1>
+        <div class="contact-sources">
+            <p>Email: clinteth.dev@gmail.com</p>
+            <p>Github: <a href="https://github.com/EthanDCR" target="_blank">github.com/EthanDCR</a></p>
+        </div>
+    </div>
+
+    <!-- Feedback Form -->
+    <form action="/api/submit-feedback" method="post">
+
+        <label for="feedback">Your Feedback:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" placeholder="Type your feedback here..." required></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

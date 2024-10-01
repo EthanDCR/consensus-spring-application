@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   <div class="dashboard-header-container">
+        <h1 class="header-text">Dashboard</h1> 
+        <button class="custom-button" id="createTripBtn">Create New Trip!</button>
+    </div>
+
+    <!-- Modal for creating a new trip -->
+    <div id="tripModal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Create a New Trip</h2>
+        <form id="tripForm">
+            <label for="tripName">Trip Name:</label>
+            <input type="text" id="tripName" name="tripName" required><br><br>
+
+            <label for="tripDate">Date:</label>
+            <input type="date" id="tripDate" name="tripDate" required><br><br>
+
+            <label for="timeSlot">Time Slot:</label>
+            <input type="time" id="timeSlot" name="timeSlot" required><br><br>
+
+            <button type="submit" class="custom-button">Create Trip</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./dashboard.js"></script>
+</body>
+</html>
+

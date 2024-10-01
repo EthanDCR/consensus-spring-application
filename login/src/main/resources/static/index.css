@@ -1,0 +1,75 @@
+/* stylesheet for Consensus landing page. */
+
+.header-bar-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background-color: seagreen;
+  opacity: 90%;
+  
+}
+
+.header-list {
+  display: flex;
+  gap: 75px;
+  padding-right: 150px;
+  list-style: none;
+  font-size: large;
+  color: white;
+  
+
+}
+
+.maincontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  background-color: whitesmoke;
+}
+
+.maintext {
+  font-size: 72px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  opacity: 80%;
+}
+
+#subtext {
+  font-size: 32px;
+  font-family: monospace;
+  padding-left: 500px;
+}
+
+#con {
+  padding-left: 20px;
+}
+
+#control {
+  padding-left: 175px;
+}
+
+.action-container {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  padding-top: 150px;
+}
+
+.buttons {
+  font-size: 56px;
+  background-color: seagreen;
+  color: white;
+  border-radius: 12px;
+  margin: 20px;
+  padding: 30px;
+}
+
+.link-list {
+  color: white;
+  text-decoration: none;
+}
+
+.link-list:hover {
+  text-decoration: underline;
+}
+
