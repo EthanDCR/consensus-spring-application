@@ -14,6 +14,8 @@ public class SecurityConfig {
   @Bean
   public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
     http
+        .csrf(csrf -> csrf
+            .ignoringRequestMatchers("/api/submit-feedback")) // Disable CSRF for /api/submit-feedback only
         .authorizeHttpRequests(authz -> authz
             .requestMatchers("/", "/contact.html", "/api/submit-feedback").permitAll() // Allow access to specific paths
             .anyRequest().authenticated() // Require authentication for all other requests
