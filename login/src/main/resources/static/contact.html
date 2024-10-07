@@ -19,8 +19,15 @@
 
     <!-- Feedback Form -->
     <form id="feedbackForm">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
         <label for="feedback">Your Feedback:</label><br>
         <textarea id="feedback" name="feedback" rows="4" placeholder="Type your feedback here..." required></textarea><br>
+        
         <input type="submit" value="Submit">
     </form>
 
@@ -28,20 +35,26 @@
         document.getElementById('feedbackForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
 
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
             const feedbackMessage = document.getElementById('feedback').value;
 
             // Make a POST request to submit the feedback
-            fetch('/api/submit-feedback', {
+            fetch('/send-email', {  // Updated the endpoint to match your Spring Boot endpoint
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
+                    'Content-Type': 'application/json'
                 },
-                body: new URLSearchParams({ feedback: feedbackMessage })
+                body: JSON.stringify({ 
+                    name: name,            // Include the user's name
+                    email: email,          // Include the user's email
+                    message: feedbackMessage // Include the user's feedback
+                })
             })
             .then(response => response.text())
             .then(data => {
                 alert(data); // Show success message
-                document.getElementById('feedback').value = ''; // Clear the feedback textarea
+                document.getElementById('feedbackForm').reset(); // Clear the form fields
             })
             .catch(error => {
                 console.error('Error:', error);
