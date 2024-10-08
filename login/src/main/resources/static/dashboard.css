@@ -117,4 +117,17 @@ body {
 }
 
 
+.trip-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.trip-button:hover {
+  background-color: #45a049;
+}
 

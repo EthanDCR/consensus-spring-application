@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Details</title>
+    <link rel="stylesheet" href="./dashboard.css">
+</head>
+<body>
+    <h1>Trip Details</h1>
+    <div id="tripInfo">
+        <!-- The trip information will be dynamically loaded here -->
+    </div>
+
+    <script>
+        // Get the tripId from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const tripId = urlParams.get('tripId');
+
+        // You can use the tripId to fetch and display specific trip details
+        document.getElementById('tripInfo').textContent = `Details for Trip ID: ${tripId}`;
+    </script>
+</body>
+</html>
